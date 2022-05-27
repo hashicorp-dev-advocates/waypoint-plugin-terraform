@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package platform;
+
+option go_package = "github.com/eveldcorp/waypoint-plugin-terraform/builder";
+
+import "google/protobuf/any.proto";
+
+message Output {
+  string organization = 1;
+  string workspace = 2;
+  google.protobuf.Any state = 3;
+}
