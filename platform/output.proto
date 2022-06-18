@@ -5,11 +5,6 @@ package platform;
 
 option go_package = "github.com/eveldcorp/waypoint-plugin-terraform/platform";
 
-import "google/protobuf/any.proto";
-
-// The output value from your Deployment
 message Output {
-  string organization = 1;
-  string workspace = 2;
-  google.protobuf.Any state = 3;
+  bytes state = 1;
 }
